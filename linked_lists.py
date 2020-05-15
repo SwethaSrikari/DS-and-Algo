@@ -18,7 +18,7 @@ class LinkedList:
 	def traverse(self):
 		if self.head:
 			current = self.head
-			while current != None:
+			while current:
 				print(current.data)
 				current = current.next
 
@@ -39,7 +39,7 @@ class LinkedList:
 	def insert_end(self,value):
 		if self.head:
 			current = self.head
-			while current.next != None:
+			while current.next:
 				current = current.next
 			current.next = value
 
@@ -179,12 +179,12 @@ class LinkedList:
 	# Reverse a Linked list
 	def reverse(self):
 		prev = None
-		curr = self.head
-		while curr is not None:
-			temp = curr.next
-			curr.next = prev
-			prev = curr
-			curr = temp
+		current = self.head
+		while current:
+			temp = current.next
+			current.next = prev
+			prev = current
+			current = temp
 			self.head = prev
 
 
